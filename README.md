@@ -10,4 +10,5 @@
   * Compile the server from the [creator's repository](https://github.com/gershuk/SimpleChatApp)
   * Compile the server from [this repository](https://github.com/ivanovskii/AwesomeMessenger/tree/main/AwesomeMessenger/AwesomeServer)
   * Run the compiled server from the [releases]()
+* Press Enter twice to start the server on localhost
 * Run UWP application
