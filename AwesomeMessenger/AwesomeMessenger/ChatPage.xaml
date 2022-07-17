@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AwesomeMessenger.ChatPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="ChatBlock">
+            
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Awesome Messenger" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <StackLayout Padding="7, 7, 7, 7">
+                <ListView x:Name="MessagesList">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BorderColor="Gray"
+                                       CornerRadius="15"
+                                       BackgroundColor="White"
+                                       HasShadow="False"
+                                       Padding="10"
+                                       Margin="10">
+                                       <StackLayout Spacing="1">
+                                        <Label Text="{Binding userLogin}"
+                                               TextColor="{Binding color}"
+                                               />
+                                        <Label Text="{Binding text}"/>
+                                       </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="MessageEntry" HorizontalOptions="FillAndExpand" />
+                    <Button Text="Send" CornerRadius="5" WidthRequest="100" TextColor="White" BackgroundColor="#4BB543" Pressed="Send_Pressed"/>
+                </StackLayout>
+
+                <Button Text="Logout" CornerRadius="5" BackgroundColor="#e32636" TextColor="White"  Pressed="Logout_Pressed"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

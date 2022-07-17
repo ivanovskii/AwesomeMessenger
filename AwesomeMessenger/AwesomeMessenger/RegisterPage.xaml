@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AwesomeMessenger.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Awesome Messenger" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <StackLayout VerticalOptions="CenterAndExpand" Padding="25, 0">
+                <Label Text="Registration" FontSize="36" Margin="0, 0, 0, 35" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="Login" Placeholder="Enter login" Margin="0, 0, 0, 20"/>
+                <Entry x:Name="Password" Placeholder="Enter password" IsPassword="True"/>
+                <Entry x:Name="Password2" Placeholder="Enter password again" IsPassword="True"/>
+                <Button BackgroundColor="#4BB543" CornerRadius="5" x:Name="CreateAccountButton" Text="Create account" TextColor="White" Pressed="CreateAccount_Pressed"/>
+                <Button BackgroundColor="#e32636" CornerRadius="5" x:Name="MainPage" Text="Back" TextColor="White" Pressed="Back_Pressed"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
